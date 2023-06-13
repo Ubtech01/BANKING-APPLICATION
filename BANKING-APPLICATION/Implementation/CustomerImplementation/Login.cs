@@ -4,13 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BANKING_APPLICATION.Interface.CustomerInterface;
+using BANKING_APPLICATION.Models.CustomerModel;
 
 namespace BANKING_APPLICATION.Implementation.CustomerImplementation
 {
-    internal class Login : ILogin
+    internal class Login :RegisterationHelper , ILogin
     {
         public void LogMeIn()
         {
+
+            List<Customer> customers = ReadCustomersFromFile("Customers.txt");
+            string emailPattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+            string passwordPattern = @"^(?=.*[a-zA-Z0-9])(?=.*[@#$%^&+=])(?=.{6,})";
+            string myemail;
+            string mypassword;
+
             Console.WriteLine("--------------login portal------------\n");
 
             Console.Write("Enter your email: ");
