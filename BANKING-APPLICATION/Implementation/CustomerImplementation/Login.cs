@@ -11,7 +11,7 @@ namespace BANKING_APPLICATION.Implementation.CustomerImplementation
     {
         public void LogMeIn()
         {
-            Console.WriteLine("---------------login portal-------------\n");
+            Console.WriteLine("--------------login portal------------\n");
 
             Console.Write("Enter your email: ");
             var email = Console.ReadLine();
