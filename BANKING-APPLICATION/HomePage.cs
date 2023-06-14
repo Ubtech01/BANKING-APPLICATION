@@ -48,7 +48,7 @@ namespace BANKING_APPLICATION
 
                 }
             }
-            while (/*!int.TryParse(input, out _) ||*/ int.Parse(input) != 1 || int.Parse(input) != 2 || int.Parse(input) != 3);
+            while (!int.TryParse(input, out _) || int.Parse(input) != 1 || int.Parse(input) != 2 || int.Parse(input) != 3);
             {
 
             }

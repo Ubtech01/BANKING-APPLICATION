@@ -1,4 +1,6 @@
-﻿using BANKING_APPLICATION.Implementation.CustomerImplementation;
+﻿using BANKING_APPLICATION.Implementation.Account_Implementation;
+using BANKING_APPLICATION.Implementation.CustomerImplementation;
+using BANKING_APPLICATION.Interface.Account_Interface;
 using BANKING_APPLICATION.Interface.CustomerInterface;
 using BANKING_APPLICATION.Models.CustomerModel;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,12 @@ namespace BANKING_APPLICATION
             services.AddSingleton<HomePage>();
             services.AddScoped<IRegCustomer, RegCustomer>();
             services.AddScoped<ILogin, Login>();
+
+            services.AddScoped<IDashBoard, DashBoard>(); 
+            services.AddScoped<ICreateAccount, CreateAccount>();
+            services.AddScoped<IDeposit, Deposit>();
+            services.AddScoped<IWithdrawal, Withdrawal>();
+            services.AddScoped<ITransfer, Transfer>();
 
             var serviceProvider =  services.BuildServiceProvider();
             var home = serviceProvider.GetRequiredService<HomePage>();
