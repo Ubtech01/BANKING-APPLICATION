@@ -22,13 +22,18 @@ namespace BANKING_APPLICATION
         public void MyHomePage()
         {
             string input;
-            do {
+
+            do
+            {
+            
+              
                 Console.WriteLine("Welcome to your Bank Application\n");
                 Console.WriteLine("Select from 1-3");
                 Console.WriteLine("1. Register");
                 Console.WriteLine("2. Login");
                 Console.WriteLine("3. Logout");
                 input = Console.ReadLine()!;
+            
 
                 if (input == "1")
                 {
