@@ -38,8 +38,7 @@ namespace BANKING_APPLICATION.Implementation.CustomerImplementation
             Console.WriteLine(">Press 3 to Withdraw");
             Console.WriteLine(">Press 4 Transfer");
             Console.WriteLine("Press 5 to get balance");
-            Console.WriteLine("Press 6 to get your Statement");
-            Console.WriteLine("Press 7 to Logout\n\n");
+            Console.WriteLine("Press 6 to Logout\n\n");
             Console.Write("Select an option: ");
 
 
@@ -87,7 +86,7 @@ namespace BANKING_APPLICATION.Implementation.CustomerImplementation
                     isValidChoice = true;
                 }
 
-                else if (mychoice == "7")
+                else if (mychoice == "6")
                 {
                     //_userService.LogMeOut();
                     isValidChoice = true;
